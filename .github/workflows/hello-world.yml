@@ -1,13 +1,17 @@
-name: hello world workflows
-run-name: ${{github.actor}} is starting github actions
+# nome file di configurazione che permette di automatizzare degli step
+name: hello-world-workflow
+#.actor variabile di ambiente che contiene il nome dell'utente che ha attivato l'azione
+run-name: ${{ github.actor}} is starting github actions
 
+# evento che scatena il jobs
 on:
- push
- 
+    push
+
+# jobs-> cosa deve fare, crea la macchina viruale
 jobs:
- my_first_job:
- runs-on: ubuntu-latest
- name: test
- steps: 
-  - run: echo "ciao a tutti"
-    
+    my_first_job:  
+        runs-on: ubuntu-latest    
+        name: test   
+        steps:
+        # - creazione della lista 
+          -  run: echo "Ciao a tutti"
