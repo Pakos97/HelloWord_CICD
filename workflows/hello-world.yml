@@ -4,3 +4,7 @@ run-name: ${{github.actor}} is starting github actions
 on:
  push
  
+jobs:
+ my_first_job:
+ name: test
+    
